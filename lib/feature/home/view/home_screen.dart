@@ -1,5 +1,7 @@
+/*
 
 import 'package:blooddb/common/widgets/tab_widgest.dart';
+import 'package:blooddb/feature/home/controller/home_controller.dart';
 import 'package:blooddb/feature/home/widgets/custom_drawer.dart';
 import 'package:blooddb/feature/tabpage/view/a_negative_screen.dart';
 import 'package:blooddb/feature/tabpage/view/a_positive_screen.dart';
@@ -9,8 +11,9 @@ import 'package:blooddb/feature/tabpage/view/b_nagative_screen.dart';
 import 'package:blooddb/feature/tabpage/view/b_positiveScreenView.dart';
 import 'package:blooddb/feature/tabpage/view/o_nagative_screen.dart';
 import 'package:blooddb/feature/tabpage/view/o_positive_screen.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 
@@ -23,7 +26,8 @@ class HomeScreenView extends StatefulWidget {
 }
 
 class _HomeScreenViewState extends State<HomeScreenView> {
-  bool active = true;
+
+  HomeController homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -36,30 +40,11 @@ class _HomeScreenViewState extends State<HomeScreenView> {
 
       ),
       appBar: AppBar(elevation: 0,toolbarHeight: 40,
-
-
-
         foregroundColor: Colors.white70,
         backgroundColor: const Color(0xFFB71C1C),centerTitle: true,
 
 
-        title: const Text("TKG - Blood Bank",style: TextStyle(color: Colors.white),),
-        actions: [
-
-          Transform.scale(
-            scale: 0.6,
-
-            child: CupertinoSwitch(
-                activeColor: Colors.green,
-                trackColor: Colors.grey,
-                value: active, onChanged:(value){
-              setState(() {
-                active =value;
-
-              });
-            }),),
-        ],
-      ),
+        title: const Text("TKG - Blood Bank",style: TextStyle(color: Colors.white),),),
       body: Column(children: [ Expanded( flex: 2,
             child: DefaultTabController(length: 8,
                 child: Column(children: [Material(
@@ -108,3 +93,4 @@ class _HomeScreenViewState extends State<HomeScreenView> {
     );
   }
 }
+*/

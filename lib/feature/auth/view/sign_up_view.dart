@@ -80,8 +80,8 @@ class _SignUpScreenViewState extends State<SignUpScreenView> {
              style: TextStyle(fontWeight: FontWeight.w500,fontSize: Dimensions.fontSizeLarge,color: Colors.red),
              hint: Text('Select Blood Group'), // Placeholder when no item is selected
              value: selectedValue,
-             items: bloodList.map((String item) {return DropdownMenuItem<String>(value: item, child: Padding(padding: const EdgeInsets.all(8.0), child: Text(item),),);
-             }).toList(),
+             items: bloodList.map((String item) {return DropdownMenuItem<String>(value: item,
+             child: Padding(padding: const EdgeInsets.all(8.0), child: Text(item),),); }).toList(),
              onChanged: (String? newValue) {setState(() {selectedValue = newValue;});},),
          ),),
      // CustomTextField(controller: dateOfBirthController,focusColor: Colors.black,hinText: "Date of birth",),
@@ -105,9 +105,7 @@ class _SignUpScreenViewState extends State<SignUpScreenView> {
          child: Container( height: 45, decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.defaultSize),  color: const Color(0xFFB71C1C),),
            child: const Center(child: Text("Save",style: TextStyle(fontSize: 16,color: Colors.white),),),),
 
-         onTap: (){
-
-         },),
+         onTap: (){},),
      ],),
    ),
 

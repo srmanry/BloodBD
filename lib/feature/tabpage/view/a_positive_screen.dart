@@ -57,7 +57,7 @@ class _APositiveScreenViewState extends State<APositiveScreenView> {
                             //profession: documentSnapshot["profession"],
 
                             location: documentSnapshot["district"],
-                            number: documentSnapshot["phoneNumber"],
+                            number: documentSnapshot["phoneNumber"], blood: '', id: 1,
                          //   indexNumber: documentSnapshot[streamSnapshot.data!.docs.length]
 
                           ),);   }); }

@@ -11,13 +11,16 @@ class CustomCardWidget extends StatelessWidget {
  final String ?dateOfBirth;
  final String ?profession;
  final String location;
+ final String blood;
  final String religion;
  final String number;
+ final int id;
 
 
 
   const CustomCardWidget({super.key,this.image, required this.name,
-  this.profession,required this.location,  this.dateOfBirth, required this.religion, required this.number,  });
+  this.profession,required this.location,  this.dateOfBirth, required this.religion, required this.number, required this.blood, required this.id,  });
+
   final  bodyTextStyle = const TextStyle(fontSize: 14,fontWeight: FontWeight.w500);
   @override
   Widget build(BuildContext context) {
@@ -40,14 +43,14 @@ class CustomCardWidget extends StatelessWidget {
                               ],),
                           ),*/
 
-                      const Padding(
+                       Padding(
                         padding: EdgeInsets.symmetric(vertical: Dimensions.defaultSize),
                         child: Row(
 
                           children: [
                             Icon(Icons.bloodtype_outlined,color: Colors.black,size: Dimensions.thirty),
                             SizedBox(width: Dimensions.twenty,),
-                            Text('A+')
+                            Text(blood,style: appBodyText)
                           ],), ),
 
                         Row(children: [
@@ -71,6 +74,8 @@ class CustomCardWidget extends StatelessWidget {
                                 const Icon(Icons.work_history_outlined,color: Colors.black,),
                                 const SizedBox(width: Dimensions.eight,),
                                 Text("Student",style: appBodyText,),], ),),
+
+                              Text(id.toString())
 
                           ],),
 
